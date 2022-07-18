@@ -1,0 +1,29 @@
+<div class="container">
+
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">{{nav_name}}</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+      </ul>
+</div>
+
+<div class="container">
+  <div class="card"  *ngFor=" let post of posts| keyvalue" >
+    <div class="card-title">
+  
+    <pre>{{post.value | json}}</pre>
+    </div>
+    <div class="card-body">
+      {{post.key}}
+    </div>
+  </div>
+</div>
