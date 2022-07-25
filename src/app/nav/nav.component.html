@@ -16,14 +16,13 @@
       </ul>
 </div>
 
-<div class="container">
-  <div class="card"  *ngFor=" let post of posts| keyvalue" >
+<div class="container" *ngFor=" let post of posts">
+  <div class="card" *ngFor=" let d in post.results"  >
     <div class="card-title">
-  
-    <pre>{{post.value | json}}</pre>
-    </div>
-    <div class="card-body">
-      {{post.key}}
-    </div>
+  </div>
+  <div class="card-body">
+  </div>
+    <pre>{{ d | json}}</pre>
+    <pre>{{post | json}}</pre>
   </div>
 </div>

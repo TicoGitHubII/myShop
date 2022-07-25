@@ -1,5 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Post } from './nav/post';
 
 @Injectable({
@@ -14,8 +15,9 @@ export class ConfigService {
   constructor(private http: HttpClient) {
   }
 
-  getPosts(){
+  getPosts(): Observable<any>{
     
-   return this.http.get<{[key: string]: Post}>(this.prismic)
+  //  return this.http.get<{[key: string]: Post}>(this.prismic)
+  return this.http.get(this.prismic)
 }
 }
